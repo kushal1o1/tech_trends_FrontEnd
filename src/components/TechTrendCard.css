@@ -1,0 +1,70 @@
+.tech-trend-card {
+  position: relative; 
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: box-shadow 0.3s, transform 0.3s;
+  border: 1px solid #e0e0e0;
+  margin: 10px;
+}
+
+.tech-trend-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.trend-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.trend-title {
+  font-size: 1.1em;
+  color: #333333;
+  margin: 0;
+}
+
+.trend-link {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.trend-link:hover {
+  color: #0056b3;
+}
+
+.trend-category {
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  padding: 5px 6px;
+  border-radius: 12px;
+  font-size: 0.65em;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 600;
+  min-width: 60px;
+  text-align: center;
+}
+
+.trend-category.global {
+  background-color: #007bff;
+}
+
+.trend-category.nepali {
+  background-color: #da126f;
+}
