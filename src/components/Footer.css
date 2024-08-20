@@ -1,33 +1,76 @@
-/* Footer Component Styles */
 .footer {
-    background-color: #ffffff; 
-    color: #000000; 
-    padding: 20px 0;
-    text-align: center;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .footer-menu {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  .footer-item {
-    color: #ffffff; /* White text color */
-    text-decoration: none;
-    font-size: 0.9em;
-  }
-  
-  .footer-item:hover {
-    text-decoration: underline;
-  }
-  
+  background: #f8f9fa; 
+  color: #343a40; 
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+  padding: 40px 20px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-col {
+  flex: 1;
+  margin: 10px;
+  min-width: 200px;
+}
+
+.footer-col h4 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.footer-col p {
+  font-size: 0.9em;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #0b1ae4; /* Light blue color for links */
+  text-decoration: none;
+}
+
+.footer-col ul li a:hover {
+  text-decoration: underline;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-media li {
+  margin-bottom: 10px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9em;
+}
+
+.footer-bottom a {
+  color: #61dafb; /* Light blue color for links */
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}

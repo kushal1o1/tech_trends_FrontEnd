@@ -62,9 +62,16 @@
 }
 
 .trend-category.global {
-  background-color: #007bff;
+  background-color: #1976d2;
 }
 
-.trend-category.nepali {
-  background-color: #da126f;
+.trend-category.trending {
+  background-color: #ffa000;
 }
+
+
+.trend-category.nepali {
+  background-color: #d32f2f;
+}
+
+

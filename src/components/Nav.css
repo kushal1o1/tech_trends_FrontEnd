@@ -1,38 +1,28 @@
-/* Nav Component Styles */
 .navbar {
-    background-color: #ffffff; 
-    padding: 10px 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .navbar-brand {
-    color: #000000; /* White text color */
-    font-size: 1.5em;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .navbar-menu {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
-  
-  .navbar-item {
-    color: #000000; /* White text color */
-    text-decoration: none;
-    font-size: 1em;
-  }
-  
-  .navbar-item:hover {
-    text-decoration: underline;
-  }
-  
+  background: #f8f9fa; /* Light background for the navbar */
+  color: #343a40; /* Dark text color */
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;
+}
+
+.navbar-container {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+}
+
+.navbar-brand {
+  font-size: 1.5em;
+  color: #343a40; /* Dark text color for the brand */
+  text-decoration: none;
+  font-weight: bold;
+  margin-bottom: 5px; /* Space between brand and bio */
+}
+
+.navbar-bio {
+  font-size: 1em;
+  color: #6c757d; /* Lighter color for the bio */
+}
