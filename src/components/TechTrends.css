@@ -6,4 +6,59 @@
     justify-content: center;
     padding: 20px;
   }
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    font-size: 1.5em;
+    color: #333; 
+  }
+
+  .loading::before {
+    content: '';
+    border: 8px solid #f3f3f3; 
+    border-top: 8px solid #3498db; 
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin-right: 10px;
+  }
+  
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+.error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    font-size: 1.2em;
+    color: #d73a49; /* Error text color */
+    padding: 20px;
+    text-align: center;
+    animation: fadeInBounce 3s ease-in-out; /* Add animation */
+  }
+  
+  @keyframes fadeInBounce {
+    0% {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
   
