@@ -44,6 +44,8 @@ const TechTrends = () => {
         <button onClick={() => setCategory('trending')}>Trending</button>
         <button onClick={() => setCategory('nepali')}>Nepali</button>
         <button onClick={() => setCategory('global')}>Global</button>
+        <button onClick={() => setCategory('ronb')}>RONB POSTS</button>
+
       </div>
 
       {/* Conditional rendering for loading, error, and data */}

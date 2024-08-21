@@ -3,7 +3,7 @@
   background-color: #f9f9f9;
   border-radius: 8px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-  padding: 25px;
+  padding: 15px;
   max-width: 350px;
   display: flex;
   flex-direction: column;
@@ -11,6 +11,8 @@
   transition: box-shadow 0.3s, transform 0.3s;
   border: 1px solid #e0e0e0;
   margin: 10px;
+  overflow: hidden;
+  height: auto;
 }
 
 .tech-trend-card:hover {
@@ -20,40 +22,57 @@
 
 .trend-image {
   width: 100%;
-  height: auto;
+  height: 200px;
+  object-fit: cover;
   border-radius: 8px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .card-content {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  height: 100%;
 }
 
 .trend-title {
   font-size: 1.1em;
   color: #333333;
   margin: 0;
+  overflow: hidden;
+}
+
+.trend-title.collapsed {
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .trend-link {
   text-decoration: none;
   color: #007bff;
   font-weight: bold;
+  text-align: center;
+
 }
 
 .trend-link:hover {
   color: #0056b3;
 }
 
+.see-more {
+  color: #007bff;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
 .trend-category {
   position: absolute;
-  top: 12px;
+  top: 10px;
   right: 10px;
-  padding: 5px 6px;
+  padding: 4px 8px;
   border-radius: 12px;
-  font-size: 0.65em;
+  font-size: 0.75em;
   color: #ffffff;
   text-transform: uppercase;
   font-weight: 600;
@@ -69,9 +88,10 @@
   background-color: #ffa000;
 }
 
-
 .trend-category.nepali {
   background-color: #d32f2f;
 }
 
-
+.trend-category.ronb {
+  background-color: #000000;
+}

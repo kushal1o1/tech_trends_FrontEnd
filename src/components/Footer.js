@@ -38,7 +38,17 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer-bottom">
-          <p>© 2024 TechTrends. All rights reserved. Data sourced from <a href="https://XYZ.com" target="_blank" rel="noopener noreferrer">XYZ</a>.</p>
+          <p>© 2024 TechTrends. All rights reserved. 
+          <ul>
+          Data sourced from 
+            <li>
+              <a href="https://ronbpost.com" target="_blank" rel="noopener noreferrer">Ronb</a>
+            </li>
+            <li>
+              <a href="https://techpana.com" target="_blank" rel="noopener noreferrer">TechPana</a>
+            </li>
+            </ul>
+            </p>
         </div>
       </div>
     </footer>
