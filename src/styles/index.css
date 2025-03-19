@@ -99,3 +99,55 @@ a, button {
   margin: 2rem 0;
   border-radius: 2px;
 }
+/* Custom Styles for Smooth Transition */
+button {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 4px rgba(0, 0, 255, 0.5); /* Focus state styling */
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes float-reverse {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(6deg);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: float-reverse 6s ease-in-out infinite;
+}
+
+.animate-rotate {
+  animation: rotate 3s ease-in-out infinite alternate;
+}

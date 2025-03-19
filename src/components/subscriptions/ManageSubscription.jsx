@@ -83,7 +83,7 @@ const ManageSubscription = () => {
   };
   
   return (
-    <Card className="max-w-lg mx-auto">
+    <Card  className="max-w-lg mx-auto">
       <h2 className="text-2xl font-bold mb-6">Manage Your Subscription</h2>
       
       {step === 1 ? (
