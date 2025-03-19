@@ -40,34 +40,37 @@ const SubscribeForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6 p-6 border rounded-lg shadow-md bg-white max-w-lg mx-auto">
-      <h2 className="text-2xl font-semibold text-center">Subscribe to News</h2>
+    <form onSubmit={handleSubmit}>
+    
 
-      {/* Email Input */}
-      <div className="space-y-2">
-        <label htmlFor="email" className="block text-lg font-medium">Email Address</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-          className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-        />
-      </div>
+   
+   <section className="mb-16">
+        <div className="bg-gradient-to-r from-gray-900 to-blue-900 rounded-xl p-12 text-white">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl font-bold mb-4">Stay Informed with Our Newsletter</h2>
+            <p className="text-lg mb-8 opacity-80">Get weekly updates on the most significant tech developments delivered to your inbox.</p>
+            <div className="flex flex-col md:flex-row gap-2 justify-center">
+                        {/* Email Input */}
+              <div className="space-y-2">
+                <label htmlFor="email" className="block text-lg font-medium">Email Address</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                  className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
 
-      {/* Category Selector Component */}
-      <CategorySelector
-        selectedCategories={selectedCategories}
-        onChange={setSelectedCategories}
-      />
-
-      {/* Error Message */}
-      {error && <p className="text-red-500 text-center">{error}</p>}
-
-      {/* Submit Button */}
-      <div>
+              {/* Category Selector Component */}
+              <CategorySelector
+                selectedCategories={selectedCategories}
+                onChange={setSelectedCategories}
+              />
+            </div>
+            <div>
         {isLoading ? (
           <Loader />
         ) : (
@@ -79,9 +82,18 @@ const SubscribeForm = () => {
           </button>
         )}
       </div>
+            <p className="text-sm mt-4 opacity-60">We respect your privacy. Unsubscribe at any time.</p>
+          </div>
+        </div>
+      </section>
+      {/* Error Message */}
+      {error && <p className="text-red-500 text-center">{error}</p>}
+
+
 
       {/* Success Message */}
       {isSuccess && <p className="text-green-500 text-center">Successfully subscribed!</p>}
+        
     </form>
   );
 };

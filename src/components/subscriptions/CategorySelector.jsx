@@ -63,3 +63,5 @@ const CategorySelector = ({ selectedCategories = [], onChange }) => {  // ✅ De
 };
 
 export default CategorySelector;
+
+
