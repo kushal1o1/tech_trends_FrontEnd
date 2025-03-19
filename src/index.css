@@ -1,17 +1,2 @@
-body {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  background-color: #ffffff;
-  color: #000000;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
+@import "tailwindcss";
 
-h1 {
-  font-size: 2em;
-  color: #333;
-  margin: 20px 0;
-}
