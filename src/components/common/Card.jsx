@@ -35,7 +35,7 @@ const Card = ({
   return (
     <div 
       className={`
-        bg-white rounded-lg shadow-md overflow-hidden
+       text-blue-400 rounded-lg shadow-md overflow-hidden
         ${padding ? 'p-4' : ''} // Conditional padding
         ${hoverable ? 'hover:shadow-lg hover:scale-105 transition-transform duration-300' : ''} // Hover effect
         ${className} // Custom classes if passed

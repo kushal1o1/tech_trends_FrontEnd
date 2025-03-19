@@ -14,7 +14,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-10">
+    <header className="bg-white shadow-sm sticky top-0 z-100">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
@@ -32,7 +32,7 @@ const Header = () => {
             <Link to="/manage-subscription" className={`${isActive('/manage-subscription')} transition-colors`}>
               Manage Subscription
             </Link>
-            <Link to="/about" className={`${isActive('/about')} transition-colors`}>
+            <Link to="/aboutus" className={`${isActive('/about')} transition-colors`}>
               About
             </Link>
           </nav>

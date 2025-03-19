@@ -65,7 +65,7 @@ const SubscribeForm = () => {
       onChange={setSelectedCategories}
       className="border-2 border-gray-200 rounded-lg p-3 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors duration-300 "
     />
-  
+   <p className="text-sm mt-4 text-white-500 opacity-60">We respect your privacy. Unsubscribe at any time.</p>
     {/* Error Message */}
     {error && (
       <div className="bg-red-600 border-l-4 border-red-500 text-red-700 p-4 rounded-lg animate-fade-in">
@@ -85,7 +85,10 @@ const SubscribeForm = () => {
           Subscribe
         </button>
       )}
+         
+
     </div>
+  
   
     {/* Success Message */}
     {isSuccess && (

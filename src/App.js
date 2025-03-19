@@ -29,6 +29,7 @@ import NewsDetail from './pages/NewsDetail';
 import SubscribePage from './pages/SubscribePage';
 import ManageSubscriptionPage from './pages/ManageSubscriptionPage';
 import NotFound from './pages/NotFound';
+import Aboutus from './pages/Aboutus';
 function App() {
   return (
     <Router>
@@ -39,6 +40,7 @@ function App() {
             <Route path="/news/:id" element={<NewsDetail />} />
             <Route path="/subscribe" element={<SubscribePage />} />
             <Route path="/manage-subscription" element={<ManageSubscriptionPage />} />
+            <Route path='/aboutus' element={<Aboutus/>} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>
