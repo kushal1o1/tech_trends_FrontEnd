@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Card from '../common/Card';
+import Logo from '../../images/TechTrendsLogo.png'
 
 const NewsCard = ({ news }) => {
   return (
@@ -15,12 +16,13 @@ const NewsCard = ({ news }) => {
               onError={(e) => {
                 e.target.onerror = null;
                 e.target.src = "https://via.placeholder.com/300x200?text=Tech+Trends";
+               
               }}
             />
           </div>
         ) : (
           <div className="relative h-48 mb-4 -mx-4 -mt-4 bg-gray-200 flex items-center justify-center rounded-t-lg">
-            <span className="text-gray-500 text-lg">Tech Trends</span>
+            <span className="text-gray-500 text-lg">Tech Trends ..</span>
           </div>
         )}
         

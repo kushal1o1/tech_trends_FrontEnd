@@ -42,27 +42,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Newsletter Section */}
-      <section className="mb-16">
-        <div className="bg-gradient-to-r from-gray-900 to-blue-900 rounded-xl p-12 text-white">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4">Stay Informed with Our Newsletter</h2>
-            <p className="text-lg mb-8 opacity-80">Get weekly updates on the most significant tech developments delivered to your inbox.</p>
-            <div className="flex flex-col md:flex-row gap-2 justify-center">
-              <input 
-                type="email" 
-                placeholder="Enter your email" 
-                className="px-6 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-800 w-full md:w-auto" 
-              />
-              <Button className="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-lg font-medium">
-                Subscribe
-              </Button>
-            </div>
-            <p className="text-sm mt-4 opacity-60">We respect your privacy. Unsubscribe at any time.</p>
-          </div>
-        </div>
-      </section>
-
+    
     </div>
   );
 };

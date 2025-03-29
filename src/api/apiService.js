@@ -33,6 +33,9 @@ export const apiService = {
   getCategories: () => api.get('/api/categories/'),
   getCategoryById: (id) => api.get(`/api/categories/${id}/`),
   
+  // sources endpoints
+  getSources: () => api.get('/api/sources/'),
+  
   // Subscribers endpoints
   getSubscribers: () => api.get('/api/subscribers/'),
   getSubscriberById: (id) => api.get(`/api/subscribers/${id}/`),

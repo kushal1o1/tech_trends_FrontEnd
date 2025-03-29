@@ -1,28 +1,36 @@
 import React, { useState } from 'react';
 import Logo from '../images/TechTrendsLogo.png';
 import { motion } from 'framer-motion';
-
-const sources = [
-  {
-    name: 'RONB (Routine Of Nepal Banda)',
-    img: 'https://scontent.fpkr2-1.fna.fbcdn.net/v/t39.30808-6/348447339_195932153387490_3866907182100963029_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=AP3gc0ImjHMQ7kNvgHsySQD&_nc_oc=AdmTWlOV13CvHa0r7XukOa4JhBnMmyWlvgZ8QOuSvwDhN__ywHFka_1OVjUj8ab7e5A&_nc_zt=23&_nc_ht=scontent.fpkr2-1.fna&_nc_gid=TbNaWBin_7G0sPGpHDN4ww&oh=00_AYEoSriaZXrEae8buZo8DdRs8tZbaq6tYxqspqnhJixZmA&oe=67E09027',
-    link: 'https://www.facebook.com/officialroutineofnepalbanda/',
-  },
-  {
-    name: 'TechPana',
-    img: 'https://techpana.prixacdn.net/static/assets/images/footerlogo-crop.png',
-    link: 'https://techpana.com',
-  },
-  {
-    name: 'Other reputable media channels',
-    img: Logo,
-    link: '#',
-  },
-];
+import { useApi } from '../hooks/useApi';
+import apiService from '../api/apiService';
+import { useEffect } from 'react';
+// const sources = [
+//   {
+//     name: 'RONB (Routine Of Nepal Banda)',
+//     img: 'https://scontent.fpkr2-1.fna.fbcdn.net/v/t39.30808-6/348447339_195932153387490_3866907182100963029_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=AP3gc0ImjHMQ7kNvgHsySQD&_nc_oc=AdmTWlOV13CvHa0r7XukOa4JhBnMmyWlvgZ8QOuSvwDhN__ywHFka_1OVjUj8ab7e5A&_nc_zt=23&_nc_ht=scontent.fpkr2-1.fna&_nc_gid=TbNaWBin_7G0sPGpHDN4ww&oh=00_AYEoSriaZXrEae8buZo8DdRs8tZbaq6tYxqspqnhJixZmA&oe=67E09027',
+//     link: 'https://www.facebook.com/officialroutineofnepalbanda/',
+//   },
+//   {
+//     name: 'TechPana',
+//     img: 'https://techpana.prixacdn.net/static/assets/images/footerlogo-crop.png',
+//     link: 'https://techpana.com',
+//   },
+//   {
+//     name: 'Other reputable media channels',
+//     img: Logo,
+//     link: '#',
+//   },
+// ];
 
 const AboutUs = () => {
   const [activeTab, setActiveTab] = useState('sources');
-
+  const { data: sources } = useApi(apiService.getSources);
+  const [sourcesData, setSourcesData] = useState(sources || []);
+  useEffect(() => {
+    if (sources) {
+      setSourcesData(sources);
+    }
+  }, [sources]);
   return (
     <section className="mb-20">
       <div className="relative bg-gradient-to-r from-purple-600/90 to-teal-500/90 rounded-xl shadow-2xl p-12 text-white overflow-hidden">
@@ -81,19 +89,36 @@ const AboutUs = () => {
               )}
 
               {activeTab === 'sources' && (
-                <div>
-                  <p className="text-gray-200 mb-4">Here are some of the sources we rely on:</p>
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
-                    {sources.map((source, index) => (
-                      <a key={index} href={source.link} target="_blank" rel="noopener noreferrer" className="group">
-                        <div className="flex flex-col items-center space-y-2 transition duration-300 transform hover:scale-105">
-                          <img src={source.img} alt={source.name} className="w-16 h-16 rounded-full shadow-lg border-4 border-teal-500 hover:border-teal-700 transition duration-300" />
-                          <span className="text-teal-300 font-medium group-hover:text-teal-500 transition duration-300">{source.name}</span>
-                        </div>
-                      </a>
-                    ))}
-                  </div>
-                </div>
+               
+                <div className=" p-8 rounded-xl shadow-2xl">
+              <p className="text-white text-xl font-semibold mb-8 text-center">Our Trusted Sources</p>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
+                {sourcesData.map((source, index) => (
+                  <a 
+                    key={index} 
+                    href={source.source_url} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="group"
+                  >
+                    <div className="flex flex-col items-center space-y-4 p-4 rounded-lg transition duration-300 transform hover:scale-105">
+                      <img 
+                        src={source.source_image_link} 
+                        alt={source.source_name} 
+                        className="w-20 h-20 rounded-full shadow-lg border-4 border-teal-500 group-hover:border-teal-400 transition duration-300" 
+                      />
+                      <span className="text-white text-lg font-medium group-hover:text-teal-300 transition duration-300">
+                        {source.source_name}
+                      </span>
+                      <div className="text-white text-sm opacity-80 group-hover:opacity-100">
+                        {source.source_description}
+                      </div>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
               )}
             </motion.div>
           </div>
