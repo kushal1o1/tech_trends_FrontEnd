@@ -1,7 +1,24 @@
 import React from 'react';
 import './Footer.css';
-
+import { useState } from 'react';
+import { useApi } from '../hooks/useApi';
+import apiService from '../api/apiService';
 const Footer = () => {
+  const [categoriesData,setCategoriesData] = useState([]);
+  const [sourcesData, setSourcesData] = useState([]);
+  const { data: categories } = useApi(apiService.getCategories);
+  const { data: sources } = useApi(apiService.getSources);
+  useEffect(() => {
+      if (sources) {
+        setSourcesData(sources);
+      }
+    }, [sources]);
+  useEffect(() => {
+      if (categories) {
+        setCategoriesData(categories);
+      }
+    }, [categories]);
+
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -13,13 +30,19 @@ const Footer = () => {
           <div className="footer-col">
             <h4>Categories</h4>
             <ul>
-              <li><a href="#nepali">Nepali Tech</a></li>
+              {categoriesData.map((category) => (
+                <li key={category.id}>
+                  <a href={`/categories/${category.id}`}>{category.name}</a>
+                </li>
+              ))}
+            </ul>
+              {/* <li><a href="#nepali">Nepali Tech</a></li>
               <li><a href="#global">Global tech</a></li>
               <li><a href="#Trending">Trending News</a></li>
               <li><a href="#global">All</a></li>
               
 
-            </ul>
+            </ul> */}
           </div>
           <div className="footer-col">
             <h4>Contact</h4>

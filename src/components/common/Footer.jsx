@@ -1,9 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../../images/TechTrendsLogo.png'
+import { useEffect, useState } from 'react';
+import { useApi } from '../../hooks/useApi';
+import apiService from '../../api/apiService';
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
+  const [categoriesData,setCategoriesData] = useState([]);
+  const [sourcesData, setSourcesData] = useState([]);
+    const { data: categories } = useApi(apiService.getCategories);
+    const { data: sources } = useApi(apiService.getSources);
+    useEffect(() => {
+        if (sources) {
+          setSourcesData(sources);
+        }
+      }, [sources]);
+    useEffect(() => {
+        if (categories) {
+          setCategoriesData(categories);
+        }
+      }, [categories]);
   return (
     <>
       {/* Footer */}
@@ -32,10 +48,11 @@ const Footer = () => {
             <div>
               <h3 className="font-semibold text-lg mb-4 text-purple-800">Categories</h3>
               <ul className="space-y-2">
-                <li><Link to="/?category=nepali" className="text-gray-600 hover:text-teal-500">Nepali</Link></li>
-                <li><Link to="/?category=global" className="text-gray-600 hover:text-teal-500">Global</Link></li>
-                <li><Link to="/?category=trending" className="text-gray-600 hover:text-teal-500">Trending</Link></li>
-                <li><Link to="/?category=ronb" className="text-gray-600 hover:text-teal-500">RONB</Link></li>
+                {categoriesData.map((category) => (
+                  <li key={category.id}>
+                    <Link to={`/?category=${category.name}`} className="text-gray-600 hover:text-teal-500">{category.name}</Link>
+                  </li>
+                ))}
               </ul>
             </div>
             <div>
@@ -47,11 +64,13 @@ const Footer = () => {
               </div>
             </div>
             <div>
-              <h3 className="font-semibold text-lg mb-4 text-purple-800">Legal</h3>
+              <h3 className="font-semibold text-lg mb-4 text-purple-800">Sources</h3>
               <ul className="space-y-2">
-                <li><Link to="/privacy" className="text-gray-600 hover:text-teal-500">Privacy Policy</Link></li>
-                <li><Link to="/terms" className="text-gray-600 hover:text-teal-500">Terms of Service</Link></li>
-                <li><Link to="/cookies" className="text-gray-600 hover:text-teal-500">Cookie Policy</Link></li>
+                {sourcesData.map((source) => (
+                  <li key={source.id}>
+                    <Link to={`${source.source_url}`} target='_blank' className="text-gray-600 hover:text-teal-500">{source.source_name}</Link>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
