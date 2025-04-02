@@ -185,9 +185,8 @@ d:/Refactor/tech_trends_FrontEnd/
 ## Technologies Used
 
 <p align="center">
-<img src="https://img.shields.io/badge/JavaScript-%23007ACC.svg?style=for-the-badge&logo=JavaScript&logoColor=white" alt="JavaScript">
-<img src="https://img.shields.io/badge/TailwindCSS-%23007ACC.svg?style=for-the-badge&logo=TailwindCSS&logoColor=white" alt="TailwindCSS">
-<img src="https://img.shields.io/badge/React-%23007ACC.svg?style=for-the-badge&logo=React&logoColor=white" alt="React">
+<img src="https://skillicons.dev/icons?i=react,tailwind,javascript">
+
 </p>
 
 ## Contributing
