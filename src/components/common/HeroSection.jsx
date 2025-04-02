@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Button from './Button';
+import HeroSectionContent from './HeroSectionContent'; 
 
 const HeroSection = () => {
   const [activeTab, setActiveTab] = useState("gmail");
@@ -18,7 +19,7 @@ const HeroSection = () => {
             <span className="text-gray-300"> Tech Insights</span>
           </h1>
           <p className="mt-4 text-lg text-gray-300">
-            Get the latest trends and news in technology, AI, and innovation delivered to your email or website.
+            Get the latest trends and news in technology, AI, and innovation delivered to your email ,Telegram Bot or  website.
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
@@ -61,24 +62,17 @@ const HeroSection = () => {
                 >
                   Web News
                 </button>
+                <button
+                  className={`w-1/2 text-center py-2 text-sm font-medium transition-all ${
+                    activeTab === "telegrambot" ? "text-white-300 border-b-2 border-teal-300" : "text-teal-400"
+                  }`}
+                  onClick={() => setActiveTab("telegrambot")}
+                >
+                  Telegram Bot
+                </button>
               </div>
 
-              {/* Content for Active Tab */}
-              {activeTab === "gmail" ? (
-                <div className="space-y-3">
-                  <div className="h-5 bg-white/20 rounded w-4/5"></div>
-                  <div className="h-5 bg-white/20 rounded w-3/5"></div>
-                  <div className="h-5 bg-white/20 rounded w-full"></div>
-                  <p className="text-xs text-white-300 mt-3">📩 Delivered straight to your Gmail inbox.</p>
-                </div>
-              ) : (
-                <div className="space-y-3">
-                  <div className="h-5 bg-white/20 rounded w-5/6"></div>
-                  <div className="h-5 bg-white/20 rounded w-4/6"></div>
-                  <div className="h-5 bg-white/20 rounded w-full"></div>
-                  <p className="text-xs text-white-300 mt-3">🌐 Read news directly on our website.</p>
-                </div>
-              )}
+              <HeroSectionContent activeTab={activeTab} />
 
               <div className="mt-6 flex justify-end">
                 <button className="text-sm text-gray-300 hover:underline">Read More →</button>
