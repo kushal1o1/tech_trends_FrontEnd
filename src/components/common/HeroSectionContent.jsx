@@ -54,11 +54,11 @@ const HeroSectionContent = (props) => {
             </div>
             <div className="flex items-center">
               <i className="fas fa-newspaper text-orange-400 mr-2"></i>
-              <p className="text-sm text-gray-300">Full article access</p>
+              <p className="text-sm text-gray-300">Full news access</p>
             </div>
             <div className="flex items-center">
-              <i className="fas fa-bookmark text-teal-400 mr-2"></i>
-              <p className="text-sm text-gray-300">Save articles for later</p>
+              <i className="fas fa-user text-teal-400 mr-2"></i>
+              <p className="text-sm text-gray-300">No need login and subscription</p>
             </div>
             <div className="h-5 bg-white/20 rounded w-5/6 animate-pulse"></div>
             <div className="h-5 bg-white/20 rounded w-4/6 animate-pulse"></div>
