@@ -108,18 +108,79 @@ nth
 ## Directory Structure
 
 ```
-project-name/
-├── .github/           # GitHub specific files (workflows, templates)
-├── docs/              # Documentation files
-├── src/               # Source code
-│   ├── components/    # UI components (for frontend projects)
-│   ├── utils/         # Utility functions
-│   └── index.js       # Entry point
-├── tests/             # Test files
-├── .gitignore         # Git ignore file
-├── LICENSE            # License file
-├── package.json       # Project dependencies and scripts
-└── README.md          # Project documentation (this file)
+d:/Refactor/tech_trends_FrontEnd/
+├─] .env (ignored)
+├── .gitignore
+├─] node_modules/ (ignored)
+├── package-lock.json
+├── package.json
+├── postcss.config.mjs
+├── public/
+│   ├── default.png
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── manifest.json
+│   └── robots.txt
+├── README.md
+└── src/
+    ├── api/
+    │   └── apiService.js
+    ├── App.css
+    ├── App.js
+    ├── components/
+    │   ├── common/
+    │   │   ├── Button.jsx
+    │   │   ├── Card.jsx
+    │   │   ├── Footer.jsx
+    │   │   ├── Header.jsx
+    │   │   ├── HeroSection.jsx
+    │   │   ├── HeroSectionContent.jsx
+    │   │   ├── Layout.jsx
+    │   │   ├── Loader.jsx
+    │   │   └── Toast.jsx
+    │   ├── news/
+    │   │   ├── NewsCard.jsx
+    │   │   └── NewsList.jsx
+    │   ├── OldComponents/
+    │   │   ├── Footer.css
+    │   │   ├── Footer.js
+    │   │   ├── LandingPage.jsx
+    │   │   ├── Nav.css
+    │   │   ├── Nav.js
+    │   │   ├── TechTrendCard.css
+    │   │   ├── TechTrendCard.js
+    │   │   ├── TechTrends.css
+    │   │   └── TechTrends.js
+    │   └── subscriptions/
+    │       ├── CategorySelector.jsx
+    │       ├── ManageSubscription.jsx
+    │       └── SubscriptionForm.jsx
+    ├── context/
+    │   └── ToastContext.jsx
+    ├── hooks/
+    │   └── useApi.js
+    ├── images/
+    │   ├── TechTrendsLogo.png
+    │   ├── TechtrendsSS1.jpg
+    │   ├── TechtrendsSS2.jpg
+    │   ├── TechtrendsSS3.jpg
+    │   └── TechtrendsSS4.jpg
+    ├── index.css
+    ├── index.js
+    ├── pages/
+    │   ├── Aboutus.jsx
+    │   ├── Home.jsx
+    │   ├── ManageSubscriptionPage.jsx
+    │   ├── NewsDetail.jsx
+    │   ├── NotFound.jsx
+    │   └── SubscribePage.jsx
+    ├── reportWebVitals.js
+    ├── styles/
+    │   ├── index.css
+    │   └── theme.js
+    └── utils/
+        └── helpers.js
+
 ```
 
 ## Technologies Used
