@@ -4,23 +4,7 @@ import { motion } from 'framer-motion';
 import { useApi } from '../hooks/useApi';
 import apiService from '../api/apiService';
 import { useEffect } from 'react';
-// const sources = [
-//   {
-//     name: 'RONB (Routine Of Nepal Banda)',
-//     img: 'https://scontent.fpkr2-1.fna.fbcdn.net/v/t39.30808-6/348447339_195932153387490_3866907182100963029_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=AP3gc0ImjHMQ7kNvgHsySQD&_nc_oc=AdmTWlOV13CvHa0r7XukOa4JhBnMmyWlvgZ8QOuSvwDhN__ywHFka_1OVjUj8ab7e5A&_nc_zt=23&_nc_ht=scontent.fpkr2-1.fna&_nc_gid=TbNaWBin_7G0sPGpHDN4ww&oh=00_AYEoSriaZXrEae8buZo8DdRs8tZbaq6tYxqspqnhJixZmA&oe=67E09027',
-//     link: 'https://www.facebook.com/officialroutineofnepalbanda/',
-//   },
-//   {
-//     name: 'TechPana',
-//     img: 'https://techpana.prixacdn.net/static/assets/images/footerlogo-crop.png',
-//     link: 'https://techpana.com',
-//   },
-//   {
-//     name: 'Other reputable media channels',
-//     img: Logo,
-//     link: '#',
-//   },
-// ];
+
 
 const AboutUs = () => {
   const [activeTab, setActiveTab] = useState('sources');
