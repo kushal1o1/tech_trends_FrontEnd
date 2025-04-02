@@ -1,24 +1,3 @@
-// import React from 'react';
-// import TechTrends from './components/TechTrends';
-// import Nav from './components/Nav';
-// import Footer from './components/Footer';
-// import LandingPage from './components/LandingPage';
-// import './index.css';
-
-// function App() {
-//   return (
-//     <div className="App">
-//        {/* <Nav />
-//        <main>
-//        <TechTrends />
-//       </main>
-//       <Footer /> */}
-//       <LandingPage/>
-//     </div>
-//   );
-// }
-
-// export default App;
 
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';

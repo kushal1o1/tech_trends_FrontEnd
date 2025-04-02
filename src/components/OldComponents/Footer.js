@@ -1,8 +1,8 @@
 import React from 'react';
 import './Footer.css';
 import { useState } from 'react';
-import { useApi } from '../hooks/useApi';
-import apiService from '../api/apiService';
+import { useApi } from '../../hooks/useApi';
+import apiService from '../../api/apiService';
 const Footer = () => {
   const [categoriesData,setCategoriesData] = useState([]);
   const [sourcesData, setSourcesData] = useState([]);

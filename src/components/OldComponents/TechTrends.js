@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import TechTrendCard from './TechTrendCard';
+import TechTrendCard from '../TechTrendCard';
 import './TechTrends.css';
 
 const TechTrends = () => {
