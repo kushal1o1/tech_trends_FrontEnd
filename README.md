@@ -1,8 +1,7 @@
 # TechTrends_FrontEnd
 
 <p align="center">
-  <img src="./src/images
-/TechTrendsLogo.png" alt="Project Logo" width="200" height="200">
+  <img src="./src/images/TechTrendsLogo.png" alt="Project Logo" width="200" height="200">
 </p>
 
 <p align="center">
