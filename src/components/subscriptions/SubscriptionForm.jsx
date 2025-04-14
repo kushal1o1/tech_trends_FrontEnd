@@ -12,7 +12,7 @@ const SubscribeForm = () => {
   const { addToast } = useToast();
 
   // API Mutation hook to create a new subscriber
-  const { mutate, isLoading, error, isSuccess } = useApiMutation(apiService.createSubscriber);
+  const { mutate,data, isLoading, error, isSuccess } = useApiMutation(apiService.createSubscriber);
 
   // Handle form submission
   const handleSubmit = async (e) => {
@@ -93,7 +93,7 @@ const SubscribeForm = () => {
     {/* Success Message */}
     {isSuccess && (
       <div className="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 rounded-lg animate-fade-in">
-        <p>Successfully subscribed!</p>
+        <p>Subscription successful! Check your email for confirmation.</p>
       </div>
     )}
   </form>
