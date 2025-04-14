@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 
 export const useApi = (apiCall, dependencies = []) => {
   const [data, setData] = useState(null);
+  const [sucessmessage, setSuccessMessage] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -12,6 +13,7 @@ export const useApi = (apiCall, dependencies = []) => {
         const response = await apiCall();
         setData(response.data);
         setError(null);
+        setSuccessMessage(response.data.message); 
       } catch (err) {
         setError(err.response?.data || err.message || 'An error occurred');
       } finally {
@@ -22,7 +24,7 @@ export const useApi = (apiCall, dependencies = []) => {
     fetchData();
   }, dependencies);
 
-  return { data, isLoading, error };
+  return { data, isLoading, error, sucessmessage };
 };
 
 export const useApiMutation = (apiCall) => {
@@ -30,7 +32,7 @@ export const useApiMutation = (apiCall) => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   const [isSuccess, setIsSuccess] = useState(false);
-
+  const [successMessage, setSuccessMessage] = useState(null);
   const mutate = async (payload) => {
     setIsLoading(true);
     setIsSuccess(false);
@@ -39,6 +41,7 @@ export const useApiMutation = (apiCall) => {
       const response = await apiCall(payload);
       setData(response.data.data);  // ✅ Extract `data` correctly
       setIsSuccess(true);
+      setSuccessMessage(response.data.message); 
       return response.data;
     } catch (err) {
       console.error("API Error:", err.response?.data);  // ✅ Debugging log
@@ -64,7 +67,7 @@ export const useApiMutation = (apiCall) => {
     // }
   };
 
-  return { mutate, data, isLoading, error, isSuccess };
+  return { mutate, data, isLoading, error, isSuccess, successMessage };
 };
 
 export default useApi;
