@@ -39,7 +39,7 @@ export const useApiMutation = (apiCall) => {
     setError(null);
     try {
       const response = await apiCall(payload);
-      setData(response.data.data);  // ✅ Extract `data` correctly
+      setData(response.data.data);
       setIsSuccess(true);
       setSuccessMessage(response.data.message); 
       return response.data;
