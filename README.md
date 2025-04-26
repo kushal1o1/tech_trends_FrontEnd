@@ -87,15 +87,13 @@ npm i
 npm start
 ```
 
+## using Docker 
+```docker
+docker-compose up
+```
+
 ## Configuration
 
-### Configuration File
-
-Create a `config.json` file in the root directory with the following structure:
-
-```json
-nth
-```
 
 ### Environment Variables
 
@@ -185,7 +183,7 @@ d:/Refactor/tech_trends_FrontEnd/
 ## Technologies Used
 
 <p align="center">
-<img src="https://skillicons.dev/icons?i=react,tailwind,javascript">
+<img src="https://skillicons.dev/icons?i=react,tailwind,javascript,docker">
 
 </p>
 
